@@ -1,4 +1,4 @@
-const winnerPoints = 1;
+const winnerPoints = 3;
 const announcment = document.querySelector(".announcment");
 const playerHand = document.querySelector(".playerhand");
 const computerHand = document.querySelector(".computerhand");
@@ -67,14 +67,15 @@ const game = () => {
     // announce the winner
 
     if (pScore == winnerPoints) {
-      announcment.textContent = "Game is over. You won";
+      announcment.textContent = "Game is over. You won 🥳";
     } else if (cScore == winnerPoints) {
-      announcment.textContent = "Game is over. You lost";
+      announcment.textContent = "Game is over. You lost😔";
     }
 
     // fading in button
     optbtns.classList.add("fadeOut");
     endDiv.classList.remove("fadeOut");
+    document.getElementById("again").style.zIndex = "1";
 
     // start a new game
     againbtn.addEventListener("click", () => {
